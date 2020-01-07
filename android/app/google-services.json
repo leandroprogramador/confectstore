@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "967783540029",
+    "firebase_url": "https://confectstore.firebaseio.com",
+    "project_id": "confectstore",
+    "storage_bucket": "confectstore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967783540029:android:65f5e5ea835206fabe5154",
+        "android_client_info": {
+          "package_name": "com.whereit.confectstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967783540029-vn7r9l7940dlsf1r9pfoupfkvorosc7g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.whereit.confectstore",
+            "certificate_hash": "d37f1c303ea00322133bc7678be42e7e9ce24843"
+          }
+        },
+        {
+          "client_id": "967783540029-7holom9q78vsedi16fnfjoq66ckmb26g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT7LCrwewVebAVMUoioC08i0LKKG2FWCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967783540029-7holom9q78vsedi16fnfjoq66ckmb26g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
