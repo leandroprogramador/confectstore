@@ -48,7 +48,7 @@ class CartTile extends StatelessWidget {
                       IconButton(
                         icon: Icon(Icons.remove),
                         color: Theme.of(context).primaryColor,
-                        onPressed: () {},
+                        onPressed: cartProduct.quantity > 1 ? () {} : null,
                       ),
                       Text(cartProduct.quantity.toString()),
                       IconButton(
@@ -83,8 +83,7 @@ class CartTile extends StatelessWidget {
                   .get(),
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  cartProduct.productData =
-                      ProductData.fromDocument(snapshot.data);
+                  cartProduct.productData = ProductData.fromDocument(snapshot.data);
                   return _buildContent();
                 } else {
                   return Container(
