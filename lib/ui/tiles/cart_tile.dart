@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:confectstore/data/cart_product.dart';
 import 'package:confectstore/data/product_data.dart';
+import 'package:confectstore/models/cart_model.dart';
 import 'package:flutter/material.dart';
 
 class CartTile extends StatelessWidget {
@@ -11,6 +12,8 @@ class CartTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget _buildContent() {
+
+      CartModel.of(context).updatePrices();
       return Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
@@ -48,18 +51,26 @@ class CartTile extends StatelessWidget {
                       IconButton(
                         icon: Icon(Icons.remove),
                         color: Theme.of(context).primaryColor,
-                        onPressed: cartProduct.quantity > 1 ? () {} : null,
+                        onPressed: cartProduct.quantity > 1 ? () {
+                          CartModel.of(context).decProduct(cartProduct);
+
+                        } : null,
                       ),
                       Text(cartProduct.quantity.toString()),
                       IconButton(
                         icon: Icon(Icons.add),
                         color: Theme.of(context).primaryColor,
-                        onPressed: () {},
+                        onPressed: () {
+                          CartModel.of(context).incProduct(cartProduct);
+
+                        },
                       ),
                       FlatButton(
                         child: Text("Remover"),
                         textColor: Colors.grey[500],
-                        onPressed: (){},
+                        onPressed: (){
+                            CartModel.of(context).removeCartItem(cartProduct);
+                        },
                       )
                     ],
                   )

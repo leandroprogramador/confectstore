@@ -27,7 +27,7 @@ class CartProduct{
       "productId" : productId,
       "quantity" : quantity,
       "size" : size,
-      //"product" : productData.toResumeMap()
+      "product" : productData.toResumeMap()
     };
   }
 }

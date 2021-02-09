@@ -1,8 +1,10 @@
 import 'package:confectstore/ui/tabs/categories_tab.dart';
 import 'package:confectstore/ui/widgets/cart_button.dart';
 import 'package:confectstore/ui/widgets/custom_drawer.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:confectstore/ui/tabs/home_tab.dart';
+import 'package:confectstore/ui/tabs/orders_tab.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -31,7 +33,13 @@ class HomeScreen extends StatelessWidget {
           floatingActionButton: CartButton(),
         ),
         Container(color: Colors.blueGrey),
-        Container(color: Colors.brown),
+       Scaffold(
+         appBar: AppBar(
+           title: Text("Meus Pedidos", textAlign: TextAlign.center,),
+         ),
+         body: OrdersTab(),
+         drawer: CustomDrawer(_pageController),
+       )
       ],
     );
   }
